@@ -1,35 +1,87 @@
 # Python--Lab-Assignment----1
 
-#lists--lists are ordered,mutable,duplicate allowing data set in python
-students = ["Abhiraj","Sumedh","Kushagra","Vaidic","Naman","Aadidev","Sehajveer"]
-#adds "not a student" to the end of the list
+# =========================
+# LISTS
+# =========================
+
+# Lists are ordered, mutable, and allow duplicate values in Python.
+
+students = ["Abhiraj", "Sumedh", "Kushagra", "Vaidic", "Naman", "Aadidev", "Sehajveer"]
+
+# Adds "not a student" to the end of the list
 students.append("not a student")
 print(students)
-"""removes the specified index very simalar to del keyword however del uses [] insead of ()
-also similar to the remove keyword but instead of specifying index we specify the item name itself"""
+
+# Removes the last item from the list
+# pop() can also remove a specific index, e.g. students.pop(2)
 students.pop()
 print(students)
-#sorts the list in alphanumeric order,the default is ascending order
+
+# Sorts the list in alphanumeric order (ascending)
 students.sort()
 print(students)
-#sorts the list in descending order
+
+# Reverses the order of the list
 students.reverse()
 print(students)
-#copies the list
+
+# Copies the list
 classmates = students.copy()
 print(classmates)
 
 
-#tuples--tuples are ordered ,immutable,duplicate allowing data set in python
-car_brand = ("Mercedes","Audi","Volvo","BMW","Maserati","Porsche","BMW","Honda","Mercedes","Maserati","Bugatti","Honda","Honda")
-#gives the output of no. of times the item is in tuple
+# =========================
+# TUPLES
+# =========================
+
+# Tuples are ordered, immutable, and allow duplicate values.
+
+car_brand = (
+    "Mercedes",
+    "Audi",
+    "Volvo",
+    "BMW",
+    "Maserati",
+    "Porsche",
+    "BMW",
+    "Honda",
+    "Mercedes",
+    "Maserati",
+    "Bugatti",
+    "Honda",
+    "Honda"
+)
+
+# Gives the number of times "Honda" appears
 print(car_brand.count("Honda"))
-#gives the output of the least index the item is occupying
+
+# Gives the index of the first occurrence of "Maserati"
 print(car_brand.index("Maserati"))
-#length of the tuple
+
+# Gives the length of the tuple
 print(len(car_brand))
-#unpacking a tuple
-(green,yellow,red,violet,blue,orange,indigo,pistacio,pink,brown,black,purple,hotpink) = car_brand
+
+
+# =========================
+# TUPLE UNPACKING
+# =========================
+
+(
+    green,
+    yellow,
+    red,
+    violet,
+    blue,
+    orange,
+    indigo,
+    pistacio,
+    pink,
+    brown,
+    black,
+    purple,
+    hotpink
+) = car_brand
+
 print(green)
 print(yellow)
 print(red)
@@ -43,22 +95,52 @@ print(brown)
 print(black)
 print(purple)
 print(hotpink)
-#joining a tuple using an addition operator
-tyres = ("Michelin","Pirelli","Bridgestone","Continental","MRF")
+
+
+# =========================
+# JOINING TUPLES
+# =========================
+
+tyres = (
+    "Michelin",
+    "Pirelli",
+    "Bridgestone",
+    "Continental",
+    "MRF"
+)
+
+# Joins two tuples using +
 tyres_shop = car_brand + tyres
 print(tyres_shop)
 
 
-#dictionary -Dictionaries are used to store data values in key:value pairs.
-#A dictionary is a collection which is ordered*, changeable and do not allow duplicates
+# =========================
+# DICTIONARIES
+# =========================
 
-car_shop = {"Car_Model":"M5","Brand":"BMW","tires":"pirelli","color":"blue"}
-#this will display all the keys
-print((car_shop).keys())
-#this will get all the values
-print((car_shop).values())
-#this will get all the items
-print((car_shop).items())
-#this will overwrite the color, we can also write car_shop.update({"color":"black"}) to get the same output
-car_shop["color"]="black"
+# Dictionaries store data in key:value pairs.
+# They are ordered, mutable, and do not allow duplicate keys.
+
+car_shop = {
+    "Car_Model": "M5",
+    "Brand": "BMW",
+    "tires": "pirelli",
+    "color": "blue"
+}
+
+# Displays all the keys
+print(car_shop.keys())
+
+# Displays all the values
+print(car_shop.values())
+
+# Displays all key:value pairs
+print(car_shop.items())
+
+# Changes the value of "color"
+car_shop["color"] = "black"
+print(car_shop)
+
+# The same thing can also be done using update()
+car_shop.update({"color": "black"})
 print(car_shop)
